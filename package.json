@@ -1,0 +1,20 @@
+{
+    "name": "agora_web_quickstart",
+    "version": "1.0.0",
+    "description": "",
+    "main": "agoraLogic.js",
+    "scripts": {
+        "build": "webpack --config webpack.config.js",
+        "start:dev": "webpack serve --open --config webpack.config.js"
+    },
+    "dependencies": {
+        "agora-rtc-sdk-ng": "latest"
+    },
+    "devDependencies": {
+        "webpack": "^5.91.0",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "5.0.4"
+    },
+    "author": "",
+    "license": "ISC"
+}
