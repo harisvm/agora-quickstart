@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './agoraLogic.js',
@@ -6,14 +7,14 @@ module.exports = {
     filename: 'bundledAgoraLogic.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  mode: 'production', // Ensure this is set to 'production'
-  module: {
-    rules: [
-      // Add any loaders if needed for processing other file types
-    ],
-  },
+  mode: 'production',
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './index.html', // Path to your existing index.html
+      filename: 'index.html',   // Name of the file in the dist folder
+    }),
+  ],
   optimization: {
     minimize: true, // Ensure minification for production
   },
-  // Exclude devServer configuration as it's not used in production builds
 };
