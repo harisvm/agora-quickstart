@@ -16,7 +16,7 @@ let options = {
     // Use a temp token
     token: "007eJxTYPCpU9fnvvlNrVeNf7uC1IdXascapbfdTtpXUmbf3XinUFKBwSTRxDDR0NgkJTXFzCTFwNjS0sjEwCDRMCnJ0tTYJC3tj+mdtIZARoaguaasjAwQCOKzMJSkFpcwMAAA3E8eSg==",
     // Set the user ID.
-    uid: 123456,
+    uid: Math.floor(Math.random() * 1000000),
 };
 
 let clientRoleOptions = {
@@ -35,7 +35,7 @@ async function startBasicLiveStreaming() {
         console.log("subscribe success");
 
         // If the remote user publishes a video track.
-        if (mediaType === "video") {
+        if (mediaType === "video") {``
             // Get the RemoteVideoTrack object in the AgoraRTCRemoteUser object.
             const remoteVideoTrack = user.videoTrack;
             // Dynamically create a container in the form of a DIV element for playing the remote video track.
