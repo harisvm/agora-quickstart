@@ -9,7 +9,7 @@ let rtc = {
     client: null,
 };
 
-const userToken = generateAgoraToken();
+//const userToken = generateAgoraToken();
 let options = {
     // Pass your app ID here.
     appId: "4a41a134ded64d03992400a1bb9534ff",
