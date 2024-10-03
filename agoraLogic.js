@@ -1,6 +1,7 @@
 
 import AgoraRTC from "agora-rtc-sdk-ng";
-
+const RtcTokenBuilder = require("./RtcTokenBuilder2").RtcTokenBuilder;
+const RtcRole = require("./RtcTokenBuilder2").Role;
 
 let rtc = {
     localAudioTrack: null,
@@ -153,5 +154,33 @@ async function startBasicLiveStreaming() {
         };
     };
 }
+function generateAgoraToken(channelName, uid) {
+  // Get the value of the environment variable AGORA_APP_ID
+  const appId = '4a41a134ded64d03992400a1bb9534ff';
+  // Get the value of the environment variable AGORA_APP_CERTIFICATE
+  const appCertificate = '6a8f501368964b8e8d5e1a8dbeb6481c';
+  // Set streaming permissions
+  const role = RtcRole.PUBLISHER;
+  // Token validity time in seconds
+  const tokenExpirationInSecond = 3600;
+  // The validity time of all permissions in seconds
+  const privilegeExpirationInSecond = 3600;
+
+  // Validate if appId and appCertificate are set
+  if (!appId || !appCertificate) {
+    console.error("Need to set environment variables AGORA_APP_ID and AGORA_APP_CERTIFICATE");
+    process.exit(1);
+  }
+
+  // Generate Token
+  const tokenWithUid = RtcTokenBuilder.buildTokenWithUid(appId, appCertificate, channelName, uid, role, tokenExpirationInSecond, privilegeExpirationInSecond);
+  return tokenWithUid;
+}
+
+// Example usage:
+const channelName = "yourChannelName";
+const uid = 2882341273;
+const token = generateAgoraToken(channelName, uid);
+console.log("Generated Token:", token);
 
 startBasicLiveStreaming();
