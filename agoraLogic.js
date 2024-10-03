@@ -181,7 +181,7 @@ function generateAgoraToken(channelName, uid) {
 // Example usage:
 const channelName = "yourChannelName";
 const uid = 2882341273;
-// const token = generateAgoraToken(channelName, uid);
-// console.log("Generated Token:", token);
+const token = generateAgoraToken(channelName, uid);
+console.log("Generated Token:", token);
 
 startBasicLiveStreaming();
