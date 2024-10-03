@@ -1,1 +1,101 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><title>Web SDK Video Quickstart</title><script src="/bundledAgoraLogic.js"></script><script defer="defer" src="bundledAgoraLogic.js"></script></head><body><h2 class="left-align">Web SDK Video Quickstart</h2><div class="row"><div><button type="button" id="host-join">Join as host</button> <button type="button" id="audience-join">Join as audience</button> <button type="button" id="leave">Leave</button></div></div></body></html>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Admint - Live Stream</title><style>body {
+            font-family: 'Arial', sans-serif;
+            background-color: #2c2f33;
+            color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        header, footer {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            background-color: #23272a;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .controls button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #7289da;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .controls button:hover {
+            background-color: #5a70b3;
+        }
+
+        .controls button:disabled {
+            background-color: #ccc;
+        }
+
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: #2c2f33;
+        }
+
+        .video-box {
+            width: 320px;
+            height: 240px;
+            background-color: #000;
+            color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .video-box:hover {
+            transform: scale(1.05);
+        }
+
+        .video-box h3 {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .video-box {
+                width: 100%;
+                height: auto;
+                flex: 1;
+            }
+        }</style><script defer="defer" src="bundledAgoraLogic.js"></script></head><body><header><h2>Admint - Live Stream</h2></header><div class="controls"><button type="button" id="host-join">Join as Host</button> <button type="button" id="audience-join">Join as Audience</button> <button type="button" id="leave">Leave</button></div><div class="video-container" id="video-container"></div><footer><p>&copy; 2024 Admint. All rights reserved.</p></footer><script src="./dist/bundledAgoraLogic.js"></script></body></html>

@@ -14,7 +14,7 @@ let options = {
     // Set the channel name.
     channel: "test",
     // Use a temp token
-    token: "007eJxTYFgpxnjpxrWHe4/FHIoTj/vq4rpqtvjRZm/dxZn/zTe9WWmmwGCSaGKYaGhskpKaYmaSYmBsaWlkYmCQaJiUZGlqbJKWdjThS1pDICPDib/szIwMEAjiszCUpBaXMDAAAMbQIWk=+mdtIZARoaguaasjAwQCOKzMJSkFpcwMAAA3E8eSg==",
+    token: "sy",
     // Set the user ID.
     uid: Math.floor(Math.random() * 1000000),
 };
