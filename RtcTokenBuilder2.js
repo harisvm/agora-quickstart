@@ -1,6 +1,6 @@
 const AccessToken = require('./AccessToken2').AccessToken2
 const ServiceRtc = require('./AccessToken2').ServiceRtc
-const ServiceRtm = require('./ AccessToken2').ServiceRtm
+const ServiceRtm = require('./AccessToken2').ServiceRtm
 
 const Role = {
     /**
