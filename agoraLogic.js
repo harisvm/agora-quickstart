@@ -9,13 +9,14 @@ let rtc = {
     client: null,
 };
 
+const userToken = generateAgoraToken();
 let options = {
     // Pass your app ID here.
     appId: "4a41a134ded64d03992400a1bb9534ff",
     // Set the channel name.
     channel: "test",
     // Use a temp token
-    token: "sy",
+    token: '007eJxTYJicEr16SeGBXS+PLrZ5YHhJzr1rywmxTlV14VIJ9vPyPjYKDCaJJoaJhsYmKakpZiYpBsaWlkYmBgaJhklJlqbGJmlpjE//pTUEMjLc+FPFyMgAgSA+C0NJanEJAwMAHz8fNQ==',
     // Set the user ID.
     uid: Math.floor(Math.random() * 1000000),
 };
