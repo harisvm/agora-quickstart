@@ -1,7 +1,7 @@
 
 import AgoraRTC from "agora-rtc-sdk-ng";
-const RtcTokenBuilder = require("./RtcTokenBuilder2").RtcTokenBuilder;
-const RtcRole = require("./RtcTokenBuilder2").Role;
+const { RtcTokenBuilder2, Role: RtcRole } = require("./RtcTokenBuilder2");
+
 
 let rtc = {
     localAudioTrack: null,
@@ -174,7 +174,7 @@ function generateAgoraToken(channelName, uid) {
   }
 
   // Generate Token
-  const tokenWithUid = RtcTokenBuilder.buildTokenWithUid(appId, appCertificate, channelName, uid, role, tokenExpirationInSecond, privilegeExpirationInSecond);
+  const tokenWithUid = RtcTokenBuilder2.buildTokenWithUid(appId, appCertificate, channelName, uid, role, tokenExpirationInSecond, privilegeExpirationInSecond);
   return tokenWithUid;
 }
 
