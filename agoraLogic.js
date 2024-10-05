@@ -1,7 +1,7 @@
 
 import AgoraRTC from "agora-rtc-sdk-ng";
-const { RtcTokenBuilder, Role: RtcRole } = require("./RtcTokenBuilder2");
-
+const RtcTokenBuilder = require("./RtcTokenBuilder2").RtcTokenBuilder;
+const RtcRole = require("./RtcTokenBuilder2").Role;
 
 let rtc = {
     localAudioTrack: null,
